@@ -7,7 +7,7 @@ module.exports = class {
         this.client=client
     }
     async run(member){
-    db.query(`select * from guilds where gid = ${member.guild.id}`, (err, req) => {
+    db.query(`select * from guilds where gid = ${member.guild.id}`, async(err, req) => {
         if(err)throw err
         if(req[0].welcome === 'off')return
         else{
