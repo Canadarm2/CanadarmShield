@@ -1,0 +1,68 @@
+timer tempoevento;
+if(TIME_HOUR==16&&TIME_MINUTE==30&&TIME_SECOND==0&&tempoevento.elapsed>=1900){
+tempoevento.restart();
+processaevento();
+}
+//desativa as 5 da tarde
+if(TIME_HOUR==17&&TIME_MINUTE==0&&TIME_SECOND==0&&tempoevento.elapsed>=1900){
+tempoevento.restart();
+processaevento();
+}
+//para o carro forte
+//ativa as 8 da noite
+if(TIME_HOUR==21&&TIME_MINUTE==0&&TIME_SECOND==0&&tempoevento.elapsed>=1900){
+tempoevento.restart();
+processaevento();
+}
+//desativa as 8 e 30 da noite
+if(TIME_HOUR==22&&TIME_MINUTE==0&&TIME_SECOND==0&&tempoevento.elapsed>=1900){
+tempoevento.restart();
+processaevento();
+}
+//train
+//on active à 16h
+if(TIME_HOUR==16&&TIME_MINUTE==0&&TIME_SECOND==0&&TEMPOEVENTO.ELAPSED()>1900){
+tempoevento.restart();
+processaevento();
+}
+//on coupe à 17h
+if(TIME_HOUR==17&&TIME_MINUTE==0&&TIME_SECOND==0&&tempoevento.elapsed()>1900){
+tempoevento.restart();
+processaevento();
+}
+//Mensagens antes de iniciar cada evento
+//Evento do carro forte
+if(TIME_HOUR==20&&TIME_MINUTE==55&&TIME_SECOND==0&&tempoevento.elapsed>=1900){
+tempoevento.restart();
+send_reliable(0,"ps notify.ogg",0);
+send_reliable(0, "msgnormal O próximo evento terá início em 5 minutos, com duração de meia hora, equipe seus amigos e dirija-se a bari onde a diversão os aguarda!", 0);
+}
+
+else if(varinhaativa==false){
+send_reliable(players[index].peer_id, "msgnormal Varinhas não estão sendo permitidas no momento.", 0);
+return;
+}
+
+void processaevento(){
+if(dardoativo==true&&fitaativa==true&&bombaativa==true||varinhaativa==true||sugadorativo==true){
+dardoativo=false;
+fitaativa=false;
+bombaativa=false;
+varinhaativa=false;
+sugadorativo=false;
+send_reliable(0,"ps notify.ogg",0);
+send_reliable(0, "msgnormal Modo evento ativado.", 0);
+}
+else{
+dardoativo=true;
+bombaativa=true;
+fitaativa=true;
+varinhaativa=true;
+sugadorativo=true;
+send_reliable(0,"ps notify.ogg",0);
+send_reliable(0, "msgnormal Modo evento desativado.", 0);
+}
+}
+
+else if(TIME_HOUR==16)send_reliable(players[index].peer_id, "msgnormal trem.", 0);
+else if(TIME_HOUR==21)send_reliable(players[index].peer_id, "msgnormal carro forte.", 0);

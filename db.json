@@ -1,0 +1,102 @@
+{
+    "tickets": {},
+    "guilds": {
+        "681653195793235981": {
+            "name": "CanadarmShield support",
+            "welcome": true,
+            "prefix": "cs!",
+            "warns": {},
+            "logChannel": "logs",
+            "wchannel": "<#767811420850225223>"
+        },
+        "752212872859353088": {
+            "name": "AroBotList",
+            "welcome": false,
+            "prefix": "cs!",
+            "warns": {}
+        },
+        "773624145837162527": {
+            "name": "𝙶𝚊𝚕𝚊𝚔𝚝𝚒𝚔 𝙰𝚛𝚖𝚞𝚝",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {
+                "768483679450169364": [
+                    {
+                        "reason": "spam",
+                        "date": 1605266964782,
+                        "mod": "699686821533188156"
+                    }
+                ]
+            }
+        },
+        "774156928628686848": {
+            "name": "! TG| Harun kullanıcısının sunucusu",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {}
+        },
+        "775827522516287498": {
+            "name": "A random thing Official server",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {}
+        },
+        "756523420010938429": {
+            "name": "Like discord",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {}
+        },
+        "774556265208086538": {
+            "name": "Ki1 • MARS 2",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {}
+        },
+        "771362493040820254": {
+            "name": "gamerkid7748",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {}
+        },
+        "722643601263165492": {
+            "name": "Melissa server",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {}
+        },
+        "767785845264482355": {
+            "name": "COMUNIZMUS Vojtěcha",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {
+                "660909071528099858": [
+                    {
+                        "reason": "nevhodne pisnicky",
+                        "date": 1605787888981,
+                        "mod": "625991004893216768"
+                    }
+                ]
+            }
+        },
+        "776941635706683462": {
+            "name": "AAAAA IT'S TIME FOR MORE BOTS",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {}
+        },
+        "771941547230363648": {
+            "name": "𝐄𝐚𝐬𝐲𝐓𝐞𝐚𝐦 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲🔥 #𝟐𝟓𝟎",
+            "welcome": false,
+            "prefix": "!",
+            "warns": {}
+        },
+        "778850366274928671": {
+            "welcome": false,
+            "name": "mιɢøᴅ sτoʀᴇ",
+            "prefix": "!",
+            "warns": {}
+        }
+    },
+    "lockedChannels": []
+}
