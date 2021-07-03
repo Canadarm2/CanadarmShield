@@ -1,5 +1,4 @@
-const Discord = require('discord.js'),
-{accept, deny, close} = require('../config.json')
+const Discord = require('discord.js')
 
 module.exports = class {
     constructor(client){
@@ -15,7 +14,7 @@ module.exports = class {
     const roles = reaction.message.guild.member(user).roles.cache
     const is_staff = roles.has('756333619823247361')||roles.has('756258205843062885')
     switch(reaction._emoji.name){
-        case '✅':
+        case process.env.accept:
 if(!is_staff)return
             channel.send('Quel commentaire souhaitez-vous ajouter pour la suggestion de '+reaction.message.author.username+'?')
             msgs++
@@ -26,7 +25,7 @@ if(!is_staff)return
             channel.bulkDelete(Number(msgs))
             msgs=1
             break
-            case deny:
+            case process.env.deny:
             if(!is_staff)return
             channel.send('Pour quelle raison souhaitez-vous refuser la suggestion de '+reaction.message.author.username+'?'); msgs++
             const msg2 = (await channel.awaitMessages(fw, {max: 1})).first().content; msgs++
@@ -36,7 +35,7 @@ if(!is_staff)return
             reaction.message.author.send(`Désolé, mais votre suggestion a été refusé pour la raison suivante: ${msg2}`).catch(e => channel.send(`${reaction.message.author.username} a fermé ses DMS`).then(m => m.delete({timeout: 5000})))
             reaction.message.delete()
             break
-            case close:
+            case process.env.close:
                 if(user.id !== reaction.message.author.id)return
                 const log = this.client.channels.cache.get('765186767556575253')
                 log.send(`Malheureusement, ${reaction.message.author.username} a décidé de supprimer sa suggestion! \:cry:`)
