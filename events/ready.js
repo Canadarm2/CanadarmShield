@@ -7,7 +7,7 @@ module.exports = class {
     }
     run() {
     console.log(`Logged in as ${this.client.user.tag}!`);
-    //client.manager.init(client.user.id);
+    this.client.manager.init(this.client.user.id);
     this.client.user.setActivity('écouter vos demandes de support en DM.', {type: 'PLAYING'})
     //this.client.emit("banChecker")
     this.client.guilds.cache.forEach(g => {

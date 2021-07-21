@@ -11,15 +11,15 @@ module.exports = class Main extends Client {
     })
 this.nodes = [
   {
-    host: "node3.adkynet.net",
+    host: "gamma.projectheberg.fr",
     password: "youshallnotpass",
-    port: 1916,
+    port: 20155,
   }
 ]
 this.commands = new Collection()
   }
 loadErelas(){
-const nodes = this.nodes
+const nodes=this.nodes
 this.manager = new erela.Manager({
   nodes,
   send: (id, payload) => {
