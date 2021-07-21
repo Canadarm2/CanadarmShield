@@ -31,7 +31,6 @@ module.exports = class {
         const prefix = req[0].prefix
     if (!commandName.startsWith(prefix)) return
     const command = this.client.commands.get(commandName.slice(prefix.length))
-console.log(command)
     if (!command)return message.channel.send('Cette commande n\'existe pas!').then(m => m.delete({timeout:5e3}))
     if (command.delete) message.delete().catch(O_o => { });
     if (command.disable) {
