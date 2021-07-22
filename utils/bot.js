@@ -17,6 +17,7 @@ this.nodes = [
   }
 ]
 this.commands = new Collection()
+this.config=require("../config.json")
   }
 loadErelas(){
 const nodes=this.nodes
@@ -75,7 +76,7 @@ this.on(event, (...args) => events.run(...args))
     return this
   }
   async init(){
-  this.login(process.env.token)
+  this.login(this.config.token)
   this.loadCommands()
   this.loadEvent()
 this.loadErelas()
